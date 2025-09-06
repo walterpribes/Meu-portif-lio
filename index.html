@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter Ribes - Designer Gráfico e Estrategista Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Grafite Profundo */
+            color: #F3F4F6; /* Cinza Claro */
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .glassmorphism {
+            background: rgba(17, 24, 39, 0.6); /* bg-gray-900 com mais transparência */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.3); /* border-gray-700 com transparência */
+        }
+        /* Estilos para o menu móvel */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .instagram-btn {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .neon-border {
+            /* Usando box-shadow para um efeito de brilho limpo que não afeta o interior do card */
+            box-shadow: 0 0 6px rgba(96, 165, 250, 0.9), 
+                        0 0 10px rgba(96, 165, 250, 0.7),
+                        0 0 16px rgba(59, 130, 246, 0.5);
+            animation: neon-pulse 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon-pulse {
+            from {
+                box-shadow: 0 0 6px rgba(96, 165, 250, 0.9), 
+                            0 0 10px rgba(96, 165, 250, 0.7),
+                            0 0 16px rgba(59, 130, 246, 0.5);
+            }
+            to {
+                box-shadow: 0 0 8px rgba(96, 165, 250, 1), 
+                            0 0 16px rgba(96, 165, 250, 0.8),
+                            0 0 24px rgba(59, 130, 246, 0.6);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
+            <a href="#" class="text-xl font-bold text-gradient">Walter Ribes</a>
+            
+            <!-- Navegação para Desktop -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#projetos" class="text-gray-300 hover:text-blue-500 transition-colors duration-300">Projetos</a>
+                <a href="#servicos" class="text-gray-300 hover:text-blue-500 transition-colors duration-300">Serviços</a>
+                <a href="#sobre" class="text-gray-300 hover:text-blue-500 transition-colors duration-300">Sobre</a>
+            </nav>
+            
+            <a href="https://wa.me/5561996391934" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">Contato</a>
+
+            <!-- Ícone do Menu Hambúrguer para Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Móvel -->
+        <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-gray-900 -translate-x-full md:hidden">
+            <a href="#projetos" class="block text-center text-white py-4 text-lg hover:bg-gray-800">Projetos</a>
+            <a href="#servicos" class="block text-center text-white py-4 text-lg hover:bg-gray-800">Serviços</a>
+            <a href="#sobre" class="block text-center text-white py-4 text-lg hover:bg-gray-800">Sobre</a>
+            <a href="#contato" class="block text-center text-white py-4 text-lg hover:bg-gray-800">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-900 py-20 pt-32 md:py-0">
+            <div id="particles-js"></div>
+            <div class="hero-content container mx-auto px-6 max-w-7xl">
+                <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                    
+                    <!-- Coluna de Texto (Esquerda) -->
+                    <div class="md:w-3/5 text-center md:text-left">
+                        <p class="text-sm font-bold text-blue-400 tracking-widest uppercase">DESIGNER GRÁFICO & ESTRATEGISTA DIGITAL</p>
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mt-4 leading-tight">
+                            Design que <span class="text-gradient">atrai</span>, estratégia que <span class="text-gradient">converte.</span>
+                        </h1>
+                        <p class="mt-6 text-base sm:text-xl text-gray-300 max-w-2xl mx-auto md:mx-0">
+                            Crio a imagem da sua marca e trago os clientes até ela, unindo criatividade visual com a precisão do marketing de performance.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#projetos" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105 text-lg text-center">Veja meus projetos</a>
+                            <a href="https://wa.me/5561996391934" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-gray-600 hover:bg-gray-800 text-gray-200 font-bold py-3 px-8 rounded-lg transition-colors duration-300 text-lg text-center">Fale comigo</a>
+                        </div>
+                    </div>
+
+                    <!-- Coluna da Imagem (Direita) -->
+                    <div class="md:w-2/5 flex justify-center md:justify-end">
+                        <div class="w-64 sm:w-80 lg:w-96 aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-lg"
+                             style="background-image: url('https://i.ibb.co/0SGGkkh/Sem-T-tulo-1.png'); background-size: 140%; background-position: center;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROJETOS -->
+        <section id="projetos" class="py-20 bg-gray-900/60 glassmorphism">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Projetos em Destaque</h2>
+                    <p class="text-lg text-gray-400 mt-2">Uma amostra do meu trabalho e dos resultados que gero.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Projeto 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                        <div class="bg-[#4d5968] flex-grow flex items-center justify-center h-64 overflow-hidden">
+                            <img src="https://i.ibb.co/DHvVv0Vy/Sem-T-tulo-1.png" alt="Projeto LIDERA REDES" class="max-h-full w-auto object-contain transform scale-125">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">LIDERA REDES</h3>
+                            <p class="mt-2 text-gray-400">Estratégia completa de tráfego pago e web design para se destacar em um mercado competitivo.</p>
+                            <a href="https://wrestudodecasolideraredes.netlify.app/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-blue-500 font-semibold hover:text-blue-400">Ver estudo de caso →</a>
+                        </div>
+                    </div>
+                    <!-- Projeto 3 (Jotaká - Carro-chefe) -->
+                    <div class="bg-gray-800 rounded-lg transform md:scale-105 lg:scale-110 hover:scale-115 transition-transform duration-300 shadow-2xl flex flex-col neon-border z-10">
+                        <div class="bg-black flex-grow flex items-center justify-center p-4 h-64">
+                            <img src="https://i.ibb.co/v6Sdf7G7/jotaka-eee.png" alt="Projeto Grupo Jotaká" class="w-full h-full object-contain">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-white">Grupo Jotaká</h3>
+                            <p class="mt-2 text-gray-400 flex-grow">Gestão de mídias sociais, criação de conteúdo e campanhas de tráfego no Google e Meta.</p>
+                            <div class="mt-4">
+                                <a href="https://wrjotaka.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-block text-blue-500 font-semibold hover:text-blue-400">Ver estudo de caso →</a>
+                            </div>
+                             <div class="mt-4">
+                                <a href="https://www.instagram.com/jotakacozinhabar/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center instagram-btn text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105 text-sm">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                                    <span>@jotakacozinhabar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg flex flex-col">
+                        <div class="bg-black flex-grow flex items-center justify-center p-4 h-64">
+                            <img src="https://i.ibb.co/Gf42zXZs/PERFIL.png" alt="Projeto VILLA SAD BEER" class="w-full h-full object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">VILLA SAD BEER</h3>
+                            <p class="mt-2 text-gray-400">Criação da identidade visual dos produtos e edição de vídeos. Trabalho ainda em desenvolvimento.</p>
+                            <a href="https://wrvillasadbeer.netlify.app/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-blue-500 font-semibold hover:text-blue-400">Ver estudo de caso →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SERVIÇOS -->
+        <section id="servicos" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Serviços Oferecidos</h2>
+                    <p class="text-lg text-gray-400 mt-2">Soluções completas para a presença digital da sua marca.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="p-8 bg-gray-800 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Design Gráfico & Web Design</h3>
+                        <p class="mt-2 text-gray-400">Criação de identidades visuais, landing pages e sites focados em experiência do usuário e conversão.</p>
+                    </div>
+                    <div class="p-8 bg-gray-800 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Gestão de Tráfego Pago</h3>
+                        <p class="mt-2 text-gray-400">Planejamento e execução de campanhas no Google Ads e Meta Ads para atrair o público certo e gerar resultados.</p>
+                    </div>
+                    <div class="p-8 bg-gray-800 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Gerenciamento de Redes Sociais</h3>
+                        <p class="mt-2 text-gray-400">Criação de conteúdo estratégico e gestão de comunidades para construir uma marca forte e engajada online.</p>
+                    </div>
+                    <div class="p-8 bg-gray-800 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Automação & IA</h3>
+                        <p class="mt-2 text-gray-400">Implementação de automações e uso de Inteligência Artificial para otimizar processos e criar conteúdo dinâmico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="py-20 bg-gray-900/60 glassmorphism">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 max-w-7xl">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="w-64 sm:w-80 lg:w-96 aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-lg"
+                         style="background-image: url('https://i.ibb.co/0SGGkkh/Sem-T-tulo-1.png'); background-size: 140%; background-position: center;">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 text-center md:text-left">
+                    <h2 class="text-4xl font-extrabold text-white">Olá, sou Walter Ribes.</h2>
+                    <p class="mt-4 text-lg text-gray-300">Sou apaixonado por transformar ideias em realidade digital. Comecei minha jornada no design gráfico, mergulhando no poder das cores e formas para comunicar mensagens. Mas logo percebi que um design incrível precisava ser visto pelas pessoas certas.
+<br><br>
+Foi essa busca por resultados que me levou ao marketing de performance. Hoje, eu uno o melhor dos dois mundos: a criatividade que encanta e a estratégia que gera resultados concretos. Estou sempre explorando novas tecnologias, como IA e automações, para entregar soluções cada vez mais inteligentes aos meus clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center max-w-7xl">
+                <h2 class="text-4xl font-extrabold text-white">Vamos Conversar?</h2>
+                <p class="text-lg text-gray-400 mt-2 max-w-2xl mx-auto">Estou disponível para novos projetos e parcerias. Entre em contato e vamos juntos transformar suas ideias em resultados.</p>
+                <a href="https://wa.me/5561996391934" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 text-base sm:py-3 sm:px-8 sm:text-lg rounded-lg transition-transform duration-300 hover:scale-105 whitespace-nowrap">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34h-.214c-.133 0-.35.042-.53.237-.18.198-.69.687-.69 1.687s.71 1.96.81 2.12c.1.16 1.403 2.13 3.383 2.992.47.205.84.326 1.12.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-1.14.164-.66.164-1.23 0-1.372-.065-.05-.159-.08-.347-.17"/>
+                    </svg>
+                    <span>Fale comigo: (61) 99639-1934</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-900/60 glassmorphism border-t border-gray-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400 max-w-7xl">
+            <p>&copy; 2024 Walter Ribes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } },
+                "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } }
+            },
+            "retina_detect": true
+        });
+
+        // Lógica do menu móvel
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+
+        // Fecha o menu ao clicar em um link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+    </script>
+</body>
+</html>
+
